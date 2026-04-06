@@ -1,0 +1,10 @@
+# Cloudflare Pages — _redirects
+# Ensures SPA routing works correctly and sets security headers
+
+# Force HTTPS
+http://treatsbyme.au/* https://treatsbyme.au/:splat 301
+http://www.treatsbyme.au/* https://treatsbyme.au/:splat 301
+https://www.treatsbyme.au/* https://treatsbyme.au/:splat 301
+
+# SPA fallback — all routes serve index.html
+/* /index.html 200

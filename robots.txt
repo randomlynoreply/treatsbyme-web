@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://treatsbyme.au/sitemap.xml
+
+# Disallow form submissions from being indexed
+Disallow: /api/
