@@ -12,6 +12,8 @@
   /* ── SPA Router ──────────────────────────── */
   const pages = $$('.page');
   const navLinks = $$('[data-page]');
+  const hamburger = $('.nav__hamburger');
+  const mobileMenu = $('.nav__mobile');
 
   function showPage(pageId) {
     pages.forEach(p => {
@@ -81,9 +83,6 @@
   }, { passive: true });
 
   /* ── Mobile Nav ──────────────────────────── */
-  const hamburger = $('.nav__hamburger');
-  const mobileMenu = $('.nav__mobile');
-
   function closeMobileNav() {
     hamburger.classList.remove('open');
     mobileMenu.classList.remove('open');
