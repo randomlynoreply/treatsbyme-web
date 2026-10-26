@@ -15,6 +15,17 @@
   const hamburger = $('.nav__hamburger');
   const mobileMenu = $('.nav__mobile');
 
+  /* -- Enquiry source (UTM tags, else referrer, else direct) -- */
+  const visitSource = $('#visit-source');
+  if (visitSource) {
+    const q = new URLSearchParams(window.location.search);
+    let source = ['utm_source', 'utm_medium', 'utm_campaign'].map(k => q.get(k)).filter(Boolean).join(' / ');
+    if (!source && document.referrer) {
+      try { source = new URL(document.referrer).hostname; } catch (e) { /* ignore */ }
+    }
+    visitSource.value = source || 'direct';
+  }
+
   function showPage(pageId) {
     pages.forEach(p => {
       p.classList.remove('active');
@@ -25,6 +36,7 @@
     const target = $(`#page-${pageId}`);
     if (!target) return;
     target.classList.add('active');
+    document.body.dataset.page = pageId;
     target.removeAttribute('aria-hidden');
 
     navLinks.filter(l => l.dataset.page === pageId)
@@ -232,6 +244,9 @@
   if (enquiryForm) {
     enquiryForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      // The form has novalidate, so check required fields here
+      if (!enquiryForm.reportValidity()) return;
 
       // Button loading state
       submitBtn.disabled = true;

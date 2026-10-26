@@ -1434,3 +1434,28 @@ ul { list-style: none; }
   background: linear-gradient(to right, transparent, var(--rose), transparent);
   margin: 24px auto;
 }
+
+/* -- Mobile sticky enquiry button -- */
+.sticky-cta { display: none; }
+
+@media (max-width: 768px) {
+  .sticky-cta {
+    display: block;
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 90;
+    padding: 14px 20px;
+    border-radius: 999px;
+    background: var(--dusty-rose);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  }
+  body[data-page="order"] .sticky-cta { display: none; }
+  body:not([data-page="order"]) { padding-bottom: 76px; }
+}
