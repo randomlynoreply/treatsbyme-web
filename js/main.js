@@ -58,7 +58,7 @@
   const pageTitles = {
     home:    'Treats By Me — Custom Cakes Sydney',
     gallery: 'Gallery — Treats By Me',
-    order:   'Order a Custom Cake — Treats By Me',
+    order:   'Enquire About a Custom Cake — Treats By Me',
     about:   'About — Treats By Me',
     contact: 'Contact — Treats By Me',
   };
