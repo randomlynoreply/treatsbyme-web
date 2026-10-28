@@ -615,21 +615,23 @@
               </div>
 
               <div class="form-group">
-                <label for="email">Email Address <span class="req" aria-label="required">*</span></label>
-                <input type="email" id="email" name="email" required autocomplete="email"
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" autocomplete="email"
                   placeholder="your@email.com">
               </div>
 
               <div class="form-group">
-                <label for="phone">Phone Number</label>
+                <label for="phone">Mobile Number</label>
                 <input type="tel" id="phone" name="phone" autocomplete="tel"
                   placeholder="04XX XXX XXX">
               </div>
 
+              <p class="form-note full" style="grid-column:1/-1;margin:0">Please give us an email or a mobile number (or both) so we can reply.</p>
+
               <div class="form-group">
-                <label for="event-type">Event Type <span class="req" aria-label="required">*</span></label>
-                <select id="event-type" name="event_type" required>
-                  <option value="" disabled selected>Select event type</option>
+                <label for="event-type">Event Type</label>
+                <select id="event-type" name="event_type">
+                  <option value="" selected>Select event type (optional)</option>
                   <option value="birthday">Birthday</option>
                   <option value="wedding">Wedding</option>
                   <option value="corporate">Corporate / Work Event</option>
@@ -659,8 +661,8 @@
               </div>
 
               <div class="form-group full">
-                <label for="design">Design Description &amp; Inspiration <span class="req" aria-label="required">*</span></label>
-                <textarea id="design" name="design_description" required rows="5"
+                <label for="design">Design Description &amp; Inspiration (optional)</label>
+                <textarea id="design" name="design_description" rows="5"
                   placeholder="Tell us about your dream cake — colours, theme, any inspiration images you have in mind, specific design elements, flavour preferences, dietary requirements, etc."></textarea>
               </div>
 

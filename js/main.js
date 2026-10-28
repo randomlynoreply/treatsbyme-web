@@ -245,6 +245,12 @@
     enquiryForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
+      // Either an email or a mobile number is needed so we can reply
+      const emailField = $('#email');
+      const phoneField = $('#phone');
+      const noContact = !emailField.value.trim() && !phoneField.value.trim();
+      emailField.setCustomValidity(noContact ? 'Please add an email or a mobile number so we can reply.' : '');
+
       // The form has novalidate, so check required fields here
       if (!enquiryForm.reportValidity()) return;
 
