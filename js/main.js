@@ -26,7 +26,19 @@
     visitSource.value = source || 'direct';
   }
 
-  function showPage(pageId) {
+  // Sections on the home page that the ribbon scrolls to. "about" is kept so old links still work.
+  const homeAnchors = {
+    'creations': 'creations',
+    'how-it-works': 'how-it-works',
+    'our-story': 'our-story',
+    'about': 'our-story',
+  };
+
+  function showPage(pageId, anchorId) {
+    if (homeAnchors[pageId]) {
+      anchorId = homeAnchors[pageId];
+      pageId = 'home';
+    }
     pages.forEach(p => {
       p.classList.remove('active');
       p.setAttribute('aria-hidden', 'true');
@@ -47,8 +59,14 @@
     // Re-init scroll reveals for new page
     setTimeout(initReveal, 50);
 
+    // Scroll to a section of the home page, if one was asked for
+    const anchorEl = anchorId && $(`#${anchorId}`);
+    if (anchorEl) {
+      setTimeout(() => anchorEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
+    }
+
     // Update URL hash for back/forward
-    history.pushState({ page: pageId }, '', `#${pageId}`);
+    history.pushState({ page: pageId, anchor: anchorId || null }, '', `#${anchorId || pageId}`);
     document.title = pageTitles[pageId] || 'Treats By Me';
 
     // Close mobile nav
@@ -58,10 +76,17 @@
   const pageTitles = {
     home:    'Treats By Me — Bespoke Sweets and Savouries, Sydney',
     gallery: 'Gallery — Treats By Me',
-    order:   'Enquire About a Custom Cake — Treats By Me',
-    about:   'About — Treats By Me',
+    order:   'Make an Enquiry — Treats By Me',
     contact: 'Contact — Treats By Me',
   };
+
+  // Section links on the home page (data-anchor) share the router with page links (data-page)
+  $$('[data-anchor]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      showPage('home', link.dataset.anchor);
+    });
+  });
 
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
@@ -79,12 +104,12 @@
   // Handle back/forward
   window.addEventListener('popstate', e => {
     const page = (e.state && e.state.page) || 'home';
-    showPage(page);
+    showPage(page, e.state && e.state.anchor);
   });
 
   // Load from hash on init
   const initPage = window.location.hash.slice(1) || 'home';
-  showPage(initPage);
+  showPage($(`#page-${initPage}`) || homeAnchors[initPage] ? initPage : 'home');
 
   /* ── Sticky Nav ──────────────────────────── */
   const nav = $('.nav');
@@ -145,8 +170,13 @@
       btn.classList.add('active');
 
       const cat = btn.dataset.filter;
+      // Event filters match one category; "cakes" groups the remaining cake styles
+      const eventCats = ['kids-party', 'baby-shower', 'wedding', 'corporate'];
       $$('.gal-item').forEach(item => {
-        if (cat === 'all' || item.dataset.category === cat) {
+        const itemCat = item.dataset.category;
+        const show = cat === 'all' ||
+          (cat === 'cakes' ? !eventCats.includes(itemCat) : itemCat === cat);
+        if (show) {
           item.style.display = '';
           // Animate in
           item.style.opacity = '0';
@@ -292,6 +322,14 @@
       `;
 
       const formData = new FormData(enquiryForm);
+
+      // What they're enquiring about travels at the top of the design notes, so the
+      // existing email workflow carries it without a new field
+      const about = $('#enquiry-about');
+      if (about && about.value) {
+        const notes = (formData.get('design_description') || '').toString().trim();
+        formData.set('design_description', `Enquiring about: ${about.value}` + (notes ? `\n\n${notes}` : ''));
+      }
 
       try {
         await sendEnquiry(formData);

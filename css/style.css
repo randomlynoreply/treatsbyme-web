@@ -162,12 +162,14 @@ ul { list-style: none; }
 .nav__logo-text {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 5px;
 }
 
 .nav__logo-main {
   font-family: var(--font-script);
   font-size: 1.7rem;
+  line-height: 1.25;
+  padding-bottom: 4px;
   color: var(--text-dark);
   transition: color var(--transition);
 }
@@ -287,10 +289,30 @@ ul { list-style: none; }
   letter-spacing: 0.18em;
 }
 
+/* Compact enquiry button, only shown beside the hamburger on mobile */
+.nav__cta-mobile { display: none; }
+
 @media (max-width: 768px) {
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
   .nav__mobile { display: flex; }
+  .nav__logo { gap: 8px; }
+  .nav__logo-img { width: 38px; height: 38px; }
+  .nav__logo-main { font-size: 1.45rem; white-space: nowrap; }
+  .nav__logo-sub { font-size: 0.5rem; letter-spacing: 0.06em; white-space: nowrap; }
+  .nav__cta-mobile {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 12px;
+    padding: 8px 14px;
+    background: var(--dusty-rose);
+    color: #fff;
+    border-radius: var(--radius-pill);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 }
 
 /* ── Buttons ── */
@@ -1582,27 +1604,45 @@ ul { list-style: none; }
   margin: 24px auto;
 }
 
-/* -- Mobile sticky enquiry button -- */
-.sticky-cta { display: none; }
+
+/* -- Section anchors: clear the sticky nav when scrolled to -- */
+#creations, #how-it-works, #our-story { scroll-margin-top: 74px; }
+
+.section-head p + p { margin-top: 12px; }
+
+/* -- How It Works: three steps -- */
+.process-steps--three { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 960px; margin-left: auto; margin-right: auto; }
+.process-note { text-align: center; margin-top: 40px; color: var(--text-light); font-size: 0.9rem; }
+
+/* -- About the Baker: photo beside the story -- */
+.story {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(32px, 6vw, 80px);
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.story__photo { margin: 0; }
+.story__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.story__copy .eyebrow { margin-bottom: 12px; display: block; }
+.story__copy h2 { margin-bottom: 20px; }
+.story__copy p { color: var(--text-mid); line-height: 1.8; margin-bottom: 16px; }
+.story__copy .story__lead {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-dark);
+}
+.story__copy .btn { margin-top: 12px; }
 
 @media (max-width: 768px) {
-  .sticky-cta {
-    display: block;
-    position: fixed;
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
-    z-index: 90;
-    padding: 14px 20px;
-    border-radius: 999px;
-    background: var(--dusty-rose);
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-  }
-  body[data-page="order"] .sticky-cta { display: none; }
-  body:not([data-page="order"]) { padding-bottom: 76px; }
+  .story { grid-template-columns: 1fr; }
+  .story__photo { max-width: 440px; margin: 0 auto; }
 }
