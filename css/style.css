@@ -1636,3 +1636,10 @@ ul { list-style: none; }
   .story { grid-template-columns: 1fr; }
   .story__photo { max-width: 440px; margin: 0 auto; }
 }
+
+/* -- Hero location line (subtle, supports local search) -- */
+.hero-location {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+}

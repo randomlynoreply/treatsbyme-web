@@ -74,7 +74,7 @@
   }
 
   const pageTitles = {
-    home:    'Treats By Me — Bespoke Sweets and Savouries, Sydney',
+    home:    'Custom Cakes Sydney | Treats By Me',
     gallery: 'Gallery — Treats By Me',
     order:   'Make an Enquiry — Treats By Me',
     contact: 'Contact — Treats By Me',
