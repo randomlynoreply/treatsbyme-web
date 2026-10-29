@@ -67,6 +67,12 @@
     link.addEventListener('click', e => {
       e.preventDefault();
       showPage(link.dataset.page);
+
+      // Category pills open the gallery on the matching filter
+      if (link.dataset.filter) {
+        const btn = $$('.filter-btn').find(b => b.dataset.filter === link.dataset.filter);
+        if (btn) btn.click();
+      }
     });
   });
 
