@@ -122,12 +122,12 @@
         <div class="party-hero__text">
           <span class="eyebrow">Sydney · Custom Cake Studio</span>
           <h1 class="display-lg">Every Cake<br><em>Tells a Story</em></h1>
-          <p>Bespoke sweets, designs handmade by Treatsbyme. Custom cakes, cupcakes, cake pops and party bags, made to match your theme.</p>
+          <p>Pair your custom cake with muffins, cake pops, cookies and more. Enquire to discuss how we can support your special event.</p>
           <ul class="party-tags" role="list" aria-label="Events we make treats for">
-            <li><a href="#gallery" data-page="gallery" data-filter="birthday"><span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a6 6 0 0 0-6 6c0 4 6 8 6 8s6-4 6-8a6 6 0 0 0-6-6z"/><path d="M12 16c0 2-1 3-1 4s1 2 1 2"/></svg></span>Kids Party</a></li>
-            <li><a href="#gallery" data-page="gallery" data-filter="all"><span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4M10.5 3v2.5h3V3M8.5 8h7v11.5a1.5 1.5 0 0 1-1.500 1.500h-4A1.500 1.500 0 0 1 8.500 19.500V8zM8.500 8a2 2 0 0 1 2-2.500h3a2 2 0 0 1 2 2.500M8.500 12.500h2.500M8.500 16h2.500"/></svg></span>Baby Shower</a></li>
+            <li><a href="#gallery" data-page="gallery" data-filter="kids-party"><span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a6 6 0 0 0-6 6c0 4 6 8 6 8s6-4 6-8a6 6 0 0 0-6-6z"/><path d="M12 16c0 2-1 3-1 4s1 2 1 2"/></svg></span>Kids Party</a></li>
+            <li><a href="#gallery" data-page="gallery" data-filter="baby-shower"><span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4M10.5 3v2.5h3V3M8.5 8h7v11.5a1.5 1.5 0 0 1-1.500 1.500h-4A1.500 1.500 0 0 1 8.500 19.500V8zM8.500 8a2 2 0 0 1 2-2.500h3a2 2 0 0 1 2 2.500M8.500 12.500h2.500M8.500 16h2.500"/></svg></span>Baby Shower</a></li>
             <li><a href="#gallery" data-page="gallery" data-filter="wedding"><span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="15" r="5"/><circle cx="15" cy="15" r="5"/><path d="M10.500 6.500L12 4l1.500 2.500"/></svg></span>Weddings</a></li>
-            <li><a href="#gallery" data-page="gallery" data-filter="all"><span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.500" width="18" height="12.500" rx="2"/><path d="M9 7.500V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.500M3 13h18"/></svg></span>Corporate Events</a></li>
+            <li><a href="#gallery" data-page="gallery" data-filter="corporate"><span class="tag-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.500" width="18" height="12.500" rx="2"/><path d="M9 7.500V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.500M3 13h18"/></svg></span>Corporate Events</a></li>
           </ul>
           <div class="hero__actions">
             <a href="#order" class="btn btn-primary" data-page="order">
@@ -344,8 +344,11 @@
         <!-- Filters -->
         <div class="gallery-filters" role="group" aria-label="Filter cakes by category">
           <button class="filter-btn active" data-filter="all">All Cakes</button>
+          <button class="filter-btn" data-filter="kids-party">Kids Party</button>
+          <button class="filter-btn" data-filter="baby-shower">Baby Shower</button>
+          <button class="filter-btn" data-filter="wedding">Weddings</button>
+          <button class="filter-btn" data-filter="corporate">Corporate Events</button>
           <button class="filter-btn" data-filter="birthday">Birthday</button>
-          <button class="filter-btn" data-filter="wedding">Wedding &amp; Tiers</button>
           <button class="filter-btn" data-filter="novelty">Novelty &amp; Sculpted</button>
           <button class="filter-btn" data-filter="drip">Drip &amp; Floral</button>
           <button class="filter-btn" data-filter="heritage">Heritage &amp; Milestones</button>
@@ -365,6 +368,275 @@
           4. Order them however you like — masonry handles layout automatically
         -->
         <div class="gallery-masonry" role="list" aria-label="Cake photos">
+          <div class="gal-item" data-category="kids-party" data-caption="Sunshine first birthday cake with matching cupcakes" role="listitem">
+            <img src="images/gallery/sunshine-first-birthday.jpg" data-full="images/gallery/sunshine-first-birthday.jpg" alt="Sunshine first birthday cake with matching cupcakes" loading="lazy" width="1170" height="1245">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="wedding" data-caption="Lilac marble wedding cake with fresh flowers" role="listitem">
+            <img src="images/gallery/lilac-marble-fresh-flowers.jpg" data-full="images/gallery/lilac-marble-fresh-flowers.jpg" alt="Lilac marble wedding cake with fresh flowers" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="baby-shower" data-caption="Pink and gold princess baby shower cake" role="listitem">
+            <img src="images/gallery/princess-pink-gold.jpg" data-full="images/gallery/princess-pink-gold.jpg" alt="Pink and gold princess baby shower cake" loading="lazy" width="1170" height="1162">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="corporate" data-caption="Pavlova and raspberry cheesecake dessert cups" role="listitem">
+            <img src="images/gallery/pavlova-raspberry-cheesecake.jpg" data-full="images/gallery/pavlova-raspberry-cheesecake.jpg" alt="Pavlova and raspberry cheesecake dessert cups" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Summer and pool party cupcakes" role="listitem">
+            <img src="images/gallery/summer-pool-party.jpg" data-full="images/gallery/summer-pool-party.jpg" alt="Summer and pool party cupcakes" loading="lazy" width="1170" height="829">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="wedding" data-caption="Wedding dessert table with dessert cups, tarts and cupcakes" role="listitem">
+            <img src="images/gallery/wedding-dessert-table-blue-backdrop.jpg" data-full="images/gallery/wedding-dessert-table-blue-backdrop.jpg" alt="Wedding dessert table with dessert cups, tarts and cupcakes" loading="lazy" width="1170" height="898">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="baby-shower" data-caption="Gold crown baby shower cookies" role="listitem">
+            <img src="images/gallery/crown-gold-pink-princess.jpg" data-full="images/gallery/crown-gold-pink-princess.jpg" alt="Gold crown baby shower cookies" loading="lazy" width="1170" height="1325">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="corporate" data-caption="Mini teapot cupcakes for a charity high tea" role="listitem">
+            <img src="images/gallery/charity-high-tea-teapots.jpg" data-full="images/gallery/charity-high-tea-teapots.jpg" alt="Mini teapot cupcakes for a charity high tea" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Sailor Moon cookies" role="listitem">
+            <img src="images/gallery/sailor-moon-cookies.jpg" data-full="images/gallery/sailor-moon-cookies.jpg" alt="Sailor Moon cookies" loading="lazy" width="1170" height="1200">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="wedding" data-caption="Wedding cake pops with sugar flowers" role="listitem">
+            <img src="images/gallery/pink-white-flowers.jpg" data-full="images/gallery/pink-white-flowers.jpg" alt="Wedding cake pops with sugar flowers" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="baby-shower" data-caption="Baby shower cake and onesie cookies dessert table" role="listitem">
+            <img src="images/gallery/pink-its-a-girl-onesie-cookies.jpg" data-full="images/gallery/pink-its-a-girl-onesie-cookies.jpg" alt="Baby shower cake and onesie cookies dessert table" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="corporate" data-caption="Tiffany blue themed cupcakes" role="listitem">
+            <img src="images/gallery/tiffany-blue-themed.jpg" data-full="images/gallery/tiffany-blue-themed.jpg" alt="Tiffany blue themed cupcakes" loading="lazy" width="1170" height="959">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Sailor Moon cake pops" role="listitem">
+            <img src="images/gallery/sailor-moon.jpg" data-full="images/gallery/sailor-moon.jpg" alt="Sailor Moon cake pops" loading="lazy" width="1170" height="1177">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="wedding" data-caption="Totoro themed ruffle wedding cake" role="listitem">
+            <img src="images/gallery/totoro-ruffles.jpg" data-full="images/gallery/totoro-ruffles.jpg" alt="Totoro themed ruffle wedding cake" loading="lazy" width="1170" height="1465">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="baby-shower" data-caption="Sports themed baby shower cupcakes" role="listitem">
+            <img src="images/gallery/sports-its-a-boy.jpg" data-full="images/gallery/sports-its-a-boy.jpg" alt="Sports themed baby shower cupcakes" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Princess cookies made for school classmates" role="listitem">
+            <img src="images/gallery/princess-tsum-tsum-classmates.jpg" data-full="images/gallery/princess-tsum-tsum-classmates.jpg" alt="Princess cookies made for school classmates" loading="lazy" width="1170" height="673">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="wedding" data-caption="Wedding dessert table with cake pops and cupcakes" role="listitem">
+            <img src="images/gallery/purple-j-and-j.jpg" data-full="images/gallery/purple-j-and-j.jpg" alt="Wedding dessert table with cake pops and cupcakes" loading="lazy" width="1170" height="949">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Disney princess inspired cookies" role="listitem">
+            <img src="images/gallery/disney-princess-tsum-tsum.jpg" data-full="images/gallery/disney-princess-tsum-tsum.jpg" alt="Disney princess inspired cookies" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="wedding" data-caption="Simple and elegant ivory wedding cake" role="listitem">
+            <img src="images/gallery/ivory-simple-elegant.jpg" data-full="images/gallery/ivory-simple-elegant.jpg" alt="Simple and elegant ivory wedding cake" loading="lazy" width="1170" height="1436">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Frozen snowflake cookies and printed party bags" role="listitem">
+            <img src="images/gallery/frozen-snowflake-cookies.jpg" data-full="images/gallery/frozen-snowflake-cookies.jpg" alt="Frozen snowflake cookies and printed party bags" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="wedding" data-caption="Two-tier wedding cake with a sugar rose and lace" role="listitem">
+            <img src="images/gallery/two-tier-pink-rose-lace.jpg" data-full="images/gallery/two-tier-pink-rose-lace.jpg" alt="Two-tier wedding cake with a sugar rose and lace" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Frozen themed party table with castle cake, cupcakes and party bags" role="listitem">
+            <img src="images/gallery/frozen-4th-birthday.jpg" data-full="images/gallery/frozen-4th-birthday.jpg" alt="Frozen themed party table with castle cake, cupcakes and party bags" loading="lazy" width="1170" height="1219">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Frozen castle cake with matching cupcakes and party bags" role="listitem">
+            <img src="images/gallery/frozen-castle.jpg" data-full="images/gallery/frozen-castle.jpg" alt="Frozen castle cake with matching cupcakes and party bags" loading="lazy" width="1170" height="1503">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Peppa Pig themed birthday cake" role="listitem">
+            <img src="images/gallery/peppa-pig.jpg" data-full="images/gallery/peppa-pig.jpg" alt="Peppa Pig themed birthday cake" loading="lazy" width="1170" height="1502">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Peppa Pig party table with cake, cookies and party bags" role="listitem">
+            <img src="images/gallery/peppa-pig-party.jpg" data-full="images/gallery/peppa-pig-party.jpg" alt="Peppa Pig party table with cake, cookies and party bags" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Blue and white cake pops for a first birthday" role="listitem">
+            <img src="images/gallery/blue-white-first-birthday.jpg" data-full="images/gallery/blue-white-first-birthday.jpg" alt="Blue and white cake pops for a first birthday" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Very Hungry Caterpillar cookies" role="listitem">
+            <img src="images/gallery/very-hungry-caterpillar.jpg" data-full="images/gallery/very-hungry-caterpillar.jpg" alt="Very Hungry Caterpillar cookies" loading="lazy" width="1170" height="1501">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Cars themed second birthday cake" role="listitem">
+            <img src="images/gallery/cars-lightning-mcqueen-2nd-birthday.jpg" data-full="images/gallery/cars-lightning-mcqueen-2nd-birthday.jpg" alt="Cars themed second birthday cake" loading="lazy" width="1170" height="1289">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Minion cake pops" role="listitem">
+            <img src="images/gallery/minions.jpg" data-full="images/gallery/minions.jpg" alt="Minion cake pops" loading="lazy" width="1170" height="1201">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-item" data-category="kids-party" data-caption="Pastel animal train first birthday cake" role="listitem">
+            <img src="images/gallery/animal-train-first-birthday.jpg" data-full="images/gallery/animal-train-first-birthday.jpg" alt="Pastel animal train first birthday cake" loading="lazy" width="1170" height="1409">
+            <div class="gal-item__overlay" aria-hidden="true">
+              <div class="gal-zoom-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              </div>
+            </div>
+          </div>
 
           <div class="gal-item" data-category="novelty" data-caption="Bluey and Bingo — tiered buttercream cake with fondant characters" role="listitem">
             <img src="images/cake-01.jpg" data-full="images/cake-01.jpg" alt="Bluey and Bingo — tiered buttercream cake with fondant characters" loading="lazy" width="800" height="1000">

@@ -242,7 +242,29 @@
 
   setTimeout(registerGalleryImages, 200);
 
-  /* ── Web3Forms Enquiry Form ──────────────── */
+  /* ── Enquiry Form ────────────────────────── */
+  // Primary: our Worker emails the enquiry to hello@ and sends the customer a
+  // thank-you. Fallback: Web3Forms, so an enquiry is never lost if the Worker is down.
+  const FORM_ENDPOINT = 'https://treatsbyme-forms.garth-law.workers.dev/';
+  const FALLBACK_ENDPOINT = 'https://api.web3forms.com/submit';
+
+  async function sendEnquiry(formData) {
+    let res = null;
+    let data = null;
+    try {
+      res = await fetch(FORM_ENDPOINT, { method: 'POST', body: formData });
+      data = await res.json();
+    } catch (e) { /* network or parse failure: fall through to the fallback */ }
+
+    if (data && data.success) return;
+    // A 4xx means the form content was rejected, so retrying elsewhere won't help
+    if (res && res.status < 500 && data) throw new Error(data.message || 'Submission failed');
+
+    const fallbackRes = await fetch(FALLBACK_ENDPOINT, { method: 'POST', body: formData });
+    const fallbackData = await fallbackRes.json();
+    if (!fallbackData.success) throw new Error(fallbackData.message || 'Submission failed');
+  }
+
   const enquiryForm = $('#enquiry-form');
   const formSuccess = $('#form-success');
   const submitBtn   = $('#form-submit-btn');
@@ -272,18 +294,9 @@
       const formData = new FormData(enquiryForm);
 
       try {
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: formData,
-        });
-        const data = await res.json();
-
-        if (data.success) {
-          enquiryForm.style.display = 'none';
-          formSuccess.style.display = 'block';
-        } else {
-          throw new Error(data.message || 'Submission failed');
-        }
+        await sendEnquiry(formData);
+        enquiryForm.style.display = 'none';
+        formSuccess.style.display = 'block';
       } catch (err) {
         console.error(err);
         submitBtn.disabled = false;
