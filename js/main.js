@@ -56,7 +56,7 @@
   }
 
   const pageTitles = {
-    home:    'Treats By Me — Custom Cakes Sydney',
+    home:    'Treats By Me — Bespoke Sweets and Savouries, Sydney',
     gallery: 'Gallery — Treats By Me',
     order:   'Enquire About a Custom Cake — Treats By Me',
     about:   'About — Treats By Me',
