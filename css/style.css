@@ -1365,20 +1365,10 @@ ul { list-style: none; }
   object-fit: cover;
 }
 
-.collage__castle  { left: 0;   top: 6%;    width: 62%; aspect-ratio: 900 / 1148; transform: rotate(-2deg);   z-index: 1; }
+.collage__castle  { left: 0;   top: 13%;   width: 62%; aspect-ratio: 900 / 1148; transform: rotate(-2deg);   z-index: 1; }
 .collage__table   { right: 0;  top: 0;     width: 48%; aspect-ratio: 900 / 930;  transform: rotate(3deg);    z-index: 2; }
 .collage__favours { right: 1%; bottom: 0;  width: 54%; aspect-ratio: 900 / 917;  transform: rotate(-2.5deg); z-index: 3; }
 
-.collage__caption {
-  position: absolute;
-  left: 3%;
-  bottom: 3%;
-  z-index: 4;
-  font-family: var(--font-script);
-  font-size: clamp(1.5rem, 4.5vw, 2.3rem);
-  line-height: 1.05;
-  color: var(--dusty-rose);
-}
 
 @media (max-width: 860px) {
   .party-hero__grid { grid-template-columns: 1fr; }
