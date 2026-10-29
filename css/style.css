@@ -1643,3 +1643,22 @@ ul { list-style: none; }
   letter-spacing: 0.06em;
   color: var(--text-light);
 }
+
+/* -- Links from the home page to the dedicated service pages -- */
+.creations-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 28px;
+  margin-top: 32px;
+  padding: 0 20px;
+}
+.creations-links a {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dusty-rose);
+  border-bottom: 1px solid var(--rose);
+  padding-bottom: 2px;
+}
+.creations-links a:hover { color: var(--text-dark); }

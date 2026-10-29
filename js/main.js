@@ -333,6 +333,8 @@
 
       try {
         await sendEnquiry(formData);
+        // Count the enquiry as a conversion; no details from the form are sent
+        if (window.gtag) gtag('event', 'generate_lead', { form_name: 'enquiry' });
         enquiryForm.style.display = 'none';
         formSuccess.style.display = 'block';
       } catch (err) {
